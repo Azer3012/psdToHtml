@@ -11,7 +11,7 @@ const inputSearch=document.querySelector('.search-form')
 search.addEventListener('click',getSearch)
 
 
-let x=true
+
 function getSearch(){
 
     

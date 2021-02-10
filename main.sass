@@ -3,6 +3,8 @@
         display: flex
         align-items: center
         justify-content: space-between
+        height: auto
+        
 .header-container
     background: #020202
     height: 44px
@@ -207,6 +209,8 @@
         @media screen and ( max-width: 1253px)
             display: block
             width: 60%
+        @media screen and ( max-width: 700px )
+            height: 40px
         form
             width: 100%
             height: 100%
@@ -227,6 +231,11 @@
                     outline: none
                 @media screen and ( max-width: 1253px)
                     background: #ffffff
+                @media screen and ( max-width: 700px )
+                    font-size: 14px
+                
+                   
+
 
 
     .right-side
@@ -237,6 +246,7 @@
             margin-right: 20px 
         .search
             cursor: pointer
+            margin-right: 17px
             @media screen and ( max-width: 1253px)
                 display: none
             .search-img
@@ -245,6 +255,7 @@
 
         .basket 
             position: relative
+            margin-right: 17px
             @media screen and ( max-width: 1253px)
                 margin-right: 17px
 
@@ -487,12 +498,12 @@
 .blockk
     display: block !important
     transition: 0.4s
+    width: 50%
 .none
     display: none !important
     transition: 0.4s
 
 .new-product
-    
     margin-top: 37px
     margin-bottom: 14px
     font-size: 22px
@@ -503,9 +514,11 @@
     display: flex
     align-items: center
     justify-content: center
+    @media screen and ( max-width: 700px )
+        font-size: 14px
 .product-slider
     width: 100%
-    height: 346px
+    height: auto
     border: 1px solid #dddddd
     position: relative
     margin-bottom: 18px
@@ -619,10 +632,15 @@
     justify-content: center
     align-items: center
     margin-bottom: 14px
+    
     .zip-inner
         width: 562px
         height: 27px
         display: flex
+        @media screen and ( max-width: 800px )
+            flex-direction: column
+            align-items: center
+        
         .zip-images
             .zip-logo
                 width: 29.22px
@@ -649,119 +667,145 @@
                 text-decoration: underline
 
 .models
-    width: 100%
+    height: auto
     display: flex
-    flex-wrap: wrap
-    align-items: center
-
-    .model-box
-        display: flex
-        width: 220px
-        align-items: center
-        justify-content: center
-        border: 1px solid #dddddd
-        height: 346px
-        background-size: cover
-        flex-direction: column
-        position: relative
-        .model-text
-            color: #ffffff
-            font-size: 22px
-            font-weight: 700
-            font-family: Poppins
-            
-        .see-all
-            font-size: 13px
-            font-weight: 400
-            font-family: Poppins
-            color: #ffffff
-            position: absolute
-            bottom: 32px
-            text-decoration: underline
-    .product-items
-        width: 20%
-        height: 100%
-        display: flex
-        flex-direction: column
-        align-items: center
-
+    justify-content: center
+    align-items: flex-start
+    
         
-        .stock
-            height: 26px
-            display: flex
-            align-items: center
-            flex-wrap: wrap
-            .stock-logo
-                width: 10px
-                height: 10px
-                border-radius: 50%
-                background: #78A962
-                display: flex
-                align-items: center
-                justify-content: center
-                img
-                    width: 4px
-                    height: 4px
-            span
-                font-size: 10px
-                font-weight: 400
-                font-family: Poppins
-                color: #78A962
-                margin-left: 5px
-                margin-right: 5px
-        .product-image
-            width: 150px
-            height: 150px
+    .my-container
+        align-items: flex-start
+        @media screen and ( max-width: 1024px )
+            flex-direction: column
+
+        .model-box
+            min-width: 20%
+            border: 1px solid #dddddd
+            height: 346px
             background-size: cover
-
-            
-        .product-star
             display: flex
             align-items: center
-            margin-top: 10px
             justify-content: center
-            .star-box
+            flex-direction: column
+            position: relative
+            @media screen and ( max-width: 1024px )
+                width: 100%
+                height: 100px
+                background-repeat: no-repeat
+        
+            .model-text
+                color: #ffffff
+                font-size: 22px
+                font-weight: 700
+                font-family: Poppins 
+                margin: 0     
+                @media screen and ( max-width: 1024px )
+                    font-size: 14px
+                    display: flex
+        
+            .see-all
+                font-size: 13px
+                font-weight: 400
+                font-family: Poppins
+                color: #ffffff
+                position: absolute
+                bottom: 32px
+                text-decoration: underline
+                @media screen and ( max-width: 1024px )
+                    bottom: 10px
+        
+        .products
+            min-width: 80%
+            display: flex
+            flex-wrap: wrap
+            flex-direction: row
+            justify-content: space-between
+            margin-left: 15px
+            @media screen and ( max-width: 472px )
+                justify-content: center
+        
+            .product-items
+                min-width: 20%
                 display: flex
-                align-items: center
+                flex-direction: column
+                align-items: center   
+                .stock
+                    display: flex
+                    align-items: center
+                    flex-wrap: wrap
+                    .stock-logo
+                        width: 10px
+                        height: 10px
+                        border-radius: 50%
+                        background: #78A962
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        img
+                            width: 4px
+                            height: 4px
+                    span
+                        font-size: 10px
+                        font-weight: 400
+                        font-family: Poppins
+                        color: #78A962
+                        margin-left: 5px
+                        margin-right: 5px
+                .product-image
+                    width: 150px
+                    height: 150px
+                    background-size: cover
 
-                img
-                    margin-right: 2px
-                    width: 13px
-                    height: 13px
-            .review
-                font-size: 12px
-                font-family: Poppins
-                font-weight: 400
-                color: #8C8C8C
-                margin-left: 9.16px
-        .product-description
-            height: 65px
-            margin-left: 25px
-            margin-top: 6px
-            font-size: 12px
-            color: #000000
-            font-family: Poppins
-            font-weight: 400
-            line-height: 19px
-        .price
-            height: 65px
-            margin-left: 25px
-            .before
-                font-size: 14px
-                font-family: Poppins
-                font-weight: 400
-                color: #666666
-                text-decoration: line-through
-            .now
-                font-size: 18px
-                font-weight: 600
-                font-family: Poppins
-       
+                    
+                .product-star
+                    display: flex
+                    align-items: center
+                    margin-top: 10px
+                    justify-content: center
+                    .star-box
+                        display: flex
+                        align-items: center
+
+                        img
+                            margin-right: 2px
+                            width: 13px
+                            height: 13px
+                    .review
+                        font-size: 12px
+                        font-family: Poppins
+                        font-weight: 400
+                        color: #8C8C8C
+                        margin-left: 9.16px
+                .product-description
+                    margin-top: 6px
+                    font-size: 12px
+                    color: #000000
+                    font-family: Poppins
+                    font-weight: 400
+                    display: flex
+                    flex-wrap: wrap
+                    max-width: 150px
+                .price
+                    
+                    .before
+                        font-size: 14px
+                        font-family: Poppins
+                        font-weight: 400
+                        color: #666666
+                        text-decoration: line-through
+                    .now
+                        font-size: 18px
+                        font-weight: 600
+                        font-family: Poppins
+        
             
 .model-menu
     margin-top: 40.87px
     margin-bottom: 23.13px
     display: flex
+    flex-wrap: wrap
+    @media screen and ( max-width: 612px )
+        jcc
     .model-items
         margin-right: 27px
         .model-links
@@ -774,19 +818,26 @@
     border-bottom: 2px solid #0156FF
     color: #000000 !important
 
+
 .comp-logos
     width: 100%
-    height: 149.48px
+    height: auto
     margin-top: 31px
+    margin-bottom: 40px
     display: flex
-    flex-wrap: wrap
-    .comp-items
-        width: 14%
-        height: 100%
-        .comp-image
-            width: 152.72px
-            height: 79.48px
-            margin: 35px 23.65px 
+    justify-content: center
+
+    .my-container
+        display: flex
+        flex-wrap: wrap
+        @media screen and ( max-width: 700px )
+            justify-content: center
+
+        .comp-items
+            .comp-image
+                width: 152.72px
+                height: 79.48px
+            
 
 
 .follow-us
@@ -803,6 +854,10 @@
     flex-wrap: wrap
     margin-bottom: 57.79px
     justify-content: center
+
+    @media screen and ( max-width: 472px )
+        justify-content: center
+
     .box-items
         width: 225px
         height: 322.11px
@@ -828,22 +883,19 @@
 
 .leave-us
     width: 100%
-    height: 310px
+    height: auto
     background: #F5F7FF
     display: flex
     justify-content: center
+    align-items: center
     margin-bottom: 60px
+    padding: 10px 0
     .inner
-        width: 922px
-        height: 205px
-        margin-top: 49px
-       
+        width: 65%
         .first-line
             display: flex
             .line-text
-                width: 850px
-                height: 103.5px
-                font-size: 18px
+                font-size: 12px
                 font-weight: 400
                 font-family: Poppins
                 margin-left: 26px
@@ -854,14 +906,11 @@
         .second-line
             display: flex
             justify-content: flex-end
-            margin-top: 7px
-            margin-bottom: 29.5px
+           
         .last-line
             display: flex
             justify-content: space-between
             button
-                width: 182px
-                height: 37px
                 border: 2px solid #0156FF
                 border-radius: 50px
                 display: flex
@@ -888,16 +937,21 @@
 .last-sec
     width: 100%
     margin-bottom: 44.53px
+    display: flex
+    justify-content: center
+
     .icon-list
         display: flex
-        height: 100%
+        @media screen and ( max-width: 700px )
+            flex-direction: column
+            align-items: center
+            
         .icon-items
-            width: 265px
+            width: 33%
             display: flex
             flex-direction: column
             align-items: center
             justify-content: space-between
-            margin-right: 130px
             .icon
                 width: 65px
                 height: 65px
@@ -925,97 +979,137 @@
 
 .footer
     width: 100%
-    height: 520px
+    height: auto
     border: 1px solid black
     background: #020203
+    display: flex
+    justify-content: center
 
-    .subscribe-container
-        width: 100%
-        height: 80px
-        border: 1px solid black
-        margin-top: 47px
-        color: #ffffff
-        display: flex
-        justify-content: space-between
+    .my-container
+        flex-direction: column
         align-items: center
-        margin-bottom: 42px
-        
-        .left
-            h1
-                width: 506px
-                font-size: 38px
-                font-weight: 500
-                font-family: Poppins
-                margin-bottom: 9px
-            span
-                font-size: 16px
-                font-weight: 300
-                font-family: Poppins
-        .right
-            input
-                width: 391px
-                height: 50px
-                background: #020203
-                border: 2px solid #ffffff
-                border-radius: 4px
-                &:focus
-                    outline: none
-                color: white
-                padding-left: 10px
-            button
-                width: 151px
-                height: 50px
-                margin-left: 23px
-                background: #0156FF
-                color: white
-                border-radius: 50px
-                border: none
-                &:focus
-                    outline: none
-
-    .footer-menu
-        display: flex
-        .footer-items
-            margin-right: 78px
-            h3
-                font-size: 14px
-                font-weight: 700
-                font-family: Poppins
-                color: rgba(255, 255, 255, 0.5)
-
-            .footer-list
-                .list-items
-                    font-size: 13px
-                    font-weight: 400
-                    font-family: Poppins
-                    color: white
-        
-    .line
-        border-bottom: 2px solid #ffffff
-        width: 100%
-        
-        margin-top: 36px
-
-    .end
-        display: flex
-        width: 100%
-        justify-content: space-between
-        margin-top: 19.41px
-        .soc
-
-        .cart-list
+        @media screen and ( max-width: 1023px )
+                align-items: flex-start
+        .subscribe-container
+            width: 100%
+            border: 1px solid black
+            margin-top: 47px
+            color: #ffffff
             display: flex
-            .cart-items
-                width: 33.31px
-                height: 21.96px
-                background: #CCEFFF
-                margin-right: 10px
-                border-radius: 2px
+            justify-content: space-between
+            align-items: center
+            margin-bottom: 42px
+            @media screen and ( max-width: 1023px )
+                flex-direction: column
+                align-items: flex-start
+                
+
+            
+            .left
+                @media screen and ( max-width: 1023px )
+                    margin-bottom: 15px
+                h1  
+                    font-size: 18px
+                    font-weight: 500
+                    font-family: Poppins
+                    margin-bottom: 9px
+                    
+                
+                span
+                    font-size: 18px
+                    font-weight: 300
+                    font-family: Poppins
+                    @media screen and ( max-width: 1023px )
+                        font-size: 14px
+            .right
                 display: flex
-                justify-content: center
                 align-items: center
-        .copy
-            color: white
+                input
+                    
+                    height: 30px
+                    background: #020203
+                    border: 2px solid #ffffff
+                    border-radius: 4px
+                    &:focus
+                        outline: none
+                    color: white
+                    padding-left: 10px
+                button
+                    height: 30px
+                    margin-left: 23px
+                    background: #0156FF
+                    color: white
+                    border-radius: 50px
+                    border: none
+                    &:focus
+                        outline: none
+
+        .footer-menu
+            display: flex
+            @media screen and ( max-width: 1023px )
+                flex-direction: column
+                align-items: start
+                
+            .footer-items
+                margin-right: 78px       
+                h3
+                    font-size: 14px
+                    font-weight: 700
+                    font-family: Poppins
+                    color: rgba(255, 255, 255, 0.5)
+                    @media screen and ( max-width: 1023px )
+                        
+                        &::after
+                            content: ''
+                            border-bottom: 1px solid #ffffff
+                            display: block
+                            border-width: 100%
+                            
+                    
+
+                .footer-list
+                    @media screen and ( max-width: 1023px )
+                        display: none
+                
+                    .list-items
+                        font-size: 13px
+                        font-weight: 400
+                        font-family: Poppins
+                        color: white
+            
+        .line
+            border-bottom: 2px solid #ffffff
+            width: 100%
+            
+            margin-top: 36px
+
+        .end
+            display: flex
+            width: 100%
+            justify-content: space-between
+            margin-top: 19.41px
+            @media screen and ( max-width: 700px )
+                flex-direction: column
+                align-items: flex-start
+            .soc
+                @media screen and ( max-width: 700px )
+                    margin-bottom: 5px
+
+            .cart-list
+                display: flex
+                .cart-items
+                    width: 33.31px
+                    height: 21.96px
+                    background: #CCEFFF
+                    margin-right: 10px
+                    border-radius: 2px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    @media screen and ( max-width: 700px )
+                        margin-bottom: 5px
+            .copy
+                color: white
 
         
 
